@@ -1,0 +1,220 @@
+
+
+.container {
+    margin: auto 3em;
+    padding-bottom: 0.5em;
+    padding-top: 50px;
+
+    /*border-bottom: 1px solid #DFDFDF;*/
+
+    max-width: 370px;
+}
+
+.formelement {
+    padding: 2px;
+    clear: both;
+    margin-bottom: 35px;
+}
+
+
+.formelement input,
+.formelement select {
+    width: 200px;
+}
+
+#Keywords {
+    display: none;
+}
+
+.formelement > p {
+    margin: 0.5em 0;
+}
+
+label {
+    font-weight: bolder;
+}
+
+.box:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.box {
+    margin-right: 10px;
+
+    border: 1px solid #DFDFDF;
+    border-radius: 2px;
+
+    vertical-align: top;
+
+    /*display: inline-block;*/
+
+    padding: 5px;
+
+    /*height: 175px;*/
+}
+
+.spacer{
+    float: right;
+    font-size:11px;
+    color:#555555;
+}
+#generate_report_submit, .green{
+    border-radius: 0;
+    background:url('green.gif');
+    padding:0px 6px;
+    border:1px solid #3b6e22;
+    height:24px;
+    line-height:24px;
+    color:#FFFFFF !important;
+    font-size:12px;
+    margin-right:10px;
+    display:inline-block;
+    text-decoration:none;
+
+    margin-left: 5px;
+}
+
+legend {
+    padding-bottom: 6px;
+}
+
+
+/* =============================================================================================================================================== */
+
+#graph .wrapper,
+#table .wrapper {
+   /* height: 300px;
+    margin: 1em 3em;*/
+}
+
+#recensements-graph {
+    overflow: auto; /* We can have a horizontal scroll bar */
+}
+
+#recensements-table {
+    width: 95%;
+    margin-top: 20px;
+    /* overflow-y: auto; We can have a horizontal scroll bar */
+}
+
+#recensements-graph:empty, #recensements-table:empty {
+    width: 0px;
+    height: 0px;
+}
+
+/* =============================================================================================================================================== */
+
+fieldset
+{
+	margin-bottom: 1em;
+	padding: 1em;
+  margin-left: 2px;
+  margin-right: 2px;
+
+    border:1px solid #DFDFDF;
+}
+
+fieldset.collapsed
+{
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	height: 1em;
+	margin-bottom: 0;
+
+    border: none;
+}
+fieldset.collapsed *
+{
+	display: none;
+}
+fieldset.collapsed legend
+{
+	display: block;
+}
+fieldset.collapsible legend a
+{
+	background: url(menu-expanded.png) 5px 75% no-repeat;
+	padding-left: 15px;
+}
+fieldset.collapsed legend a
+{
+	background-image: url(menu-collapsed.png);
+	background-position: 5px 50%;
+}
+* fieldset.collapsed legend,* fieldset.collapsed legend *,* fieldset.collapsed table *
+{
+	display: inline;
+}
+fieldset.collapsible
+{
+	position: relative;
+}
+fieldset.collapsible legend a
+{
+	display: block;
+}
+fieldset.collapsible .fieldset-wrapper
+{
+	overflow: auto;
+}
+
+fieldset.collapsible legend.collapse-processed  a:hover {
+  text-decoration: underline;
+}
+
+#msg {
+  margin: 30px 40px;
+}
+
+#msg > div.error {
+    padding: auto 10px;
+      display: inline-block;
+}
+
+#msg > div.error > span.icon {
+    background: url(error.png) no-repeat center left;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.clearfix:after{
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow:hidden;
+}
+.clearfix {display: block;}
+
+.error,
+.alert,
+.notice,
+.success,
+.info { padding: 0.8em; margin-bottom: 1em; border: 2px solid #ddd; }
+
+.error, .alert { background: #fbe3e4; color: #8a1f11; border-color: #fbc2c4; }
+.notice        { background: #fff6bf; color: #514721; border-color: #ffd324; }
+.success       { background: #e6efc2; color: #264409; border-color: #c6d880; }
+.info          { background: #d5edf8; color: #205791; border-color: #92cae4; }
+.error a, .alert a { color: #8a1f11; }
+.notice a          { color: #514721; }
+.success a         { color: #264409; }
+.info a            { color: #205791; }
+
+#loading {
+    background: url(loading_fb.gif) no-repeat center left;
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loading {
+    margin: auto 2em;
+}
