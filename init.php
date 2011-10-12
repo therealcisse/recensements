@@ -5,10 +5,12 @@
 
 Plugin Name: Recensements
 Description: This plug-in will display a graphical report for admin about, keyword mentions in articles.
-Version: 0.6
+Version: 0.9.1
 Author: amsayk
 
 */
+
+define('RECENSEMENTS_VERSION', '0.9.1');
 
 function recensements_report_deactivate() {}
 
@@ -71,55 +73,55 @@ function generate_series_scripts(){
    //wp_enqueue_script("isDate", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/is_date.js"));
 
    // List Builder
-   //wp_enqueue_script("listbuilder", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jQuery.listbuilder.js"), array('jquery'));
+   //wp_enqueue_script("listbuilder", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jQuery.listbuilder.js"), array('jquery'), RECENSEMENTS_VERSION);
 
-   //wp_enqueue_script("dateformat", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/date_format.js"));
+   //wp_enqueue_script("dateformat", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/date_format.js"), array(), RECENSEMENTS_VERSION);
 
    //jquery.datePicker
-   //wp_enqueue_script("date.js", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/date.js"));
+   //wp_enqueue_script("date.js", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/date.js"), array(), RECENSEMENTS_VERSION);
 
     //JQuery UI DatePicker
    //wp_enqueue_script("jquery.ui.datePicker.fr", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jquery.ui.datepicker-fr.js"));
-   wp_enqueue_script("jquery.ui.datePicker", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jquery-ui-1.8.16.custom.min.js"));
+   wp_enqueue_script("jquery.ui.datePicker", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jquery-ui-1.8.16.custom.min.js"), array(), RECENSEMENTS_VERSION);
 
    //JqPlot
-   wp_enqueue_script("excanvas", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/excanvas.min.js"));
-   wp_enqueue_script("jqplot", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/jquery.jqplot.min.js"), array( 'jquery' ));
-   wp_enqueue_script("jqplot.canvasTextRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.canvasTextRenderer.min.js"), array( 'jqplot' ));
-   wp_enqueue_script("jqplot.canvasAxisTickRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"), array( 'jqplot' ));
-   wp_enqueue_script("jqplot.barRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.barRenderer.min.js"), array( 'jqplot' ));
-   wp_enqueue_script("jqplot.categoryAxisRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"), array( 'jqplot' ));
+   wp_enqueue_script("excanvas", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/excanvas.min.js"), array(), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jqplot", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/jquery.jqplot.min.js"), array( 'jquery' ), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jqplot.canvasTextRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.canvasTextRenderer.min.js"), array( 'jqplot' ), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jqplot.canvasAxisTickRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.canvasAxisTickRenderer.min.js"), array( 'jqplot' ), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jqplot.barRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.barRenderer.min.js"), array( 'jqplot' ), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jqplot.categoryAxisRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"), array( 'jqplot' ), RECENSEMENTS_VERSION);
 
     //WIJMO
-   wp_enqueue_script("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/wijmo/jquery.wijmo.wijtabs.min.js"));
+   wp_enqueue_script("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/wijmo/jquery.wijmo.wijtabs.min.js"), array(), RECENSEMENTS_VERSION);
 
    //TaBLe Sorter
-   wp_enqueue_script("jQuery.metadata", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.metadata.js"));
-   wp_enqueue_script("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.tablesorter-update.min.js"));
+   wp_enqueue_script("jQuery.metadata", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.metadata.js"), array(), RECENSEMENTS_VERSION);
+   wp_enqueue_script("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.tablesorter-update.min.js"), array(), RECENSEMENTS_VERSION);
 
    //wp_enqueue_script("generate-series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/generate_series.js"));
-   wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/main.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
+   wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/main.js"), array(), RECENSEMENTS_VERSION); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
    //wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/all.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
 }
 
 function generate_series_styles(){
-   wp_enqueue_style("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/style.css"));
+   wp_enqueue_style("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/style.css"), array(), RECENSEMENTS_VERSION);
 
    // jqplot
-   wp_enqueue_style("jqplot", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/jqplot/jquery.jqplot.css"));
+   wp_enqueue_style("jqplot", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/jqplot/jquery.jqplot.css"), array(), RECENSEMENTS_VERSION);
 
    // List Builder
-   wp_enqueue_style("listbuilder", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/jQuery.listbuilder.css"));
+   wp_enqueue_style("listbuilder", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/jQuery.listbuilder.css"), array(), RECENSEMENTS_VERSION);
 
    //TAbleSorter
-   wp_enqueue_style("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/tablesorter/blue/style.css"));
+   wp_enqueue_style("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/tablesorter/blue/style.css"), array(), RECENSEMENTS_VERSION);
 
     //WIJMO
-   wp_enqueue_style("WIJMO.jquery", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/rocket/jquery-wijmo.css"));
-   wp_enqueue_style("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/wijmo/jquery.wijmo.wijtabs.css"));
+   wp_enqueue_style("WIJMO.jquery", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/rocket/jquery-wijmo.css"), array(), RECENSEMENTS_VERSION);
+   wp_enqueue_style("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/wijmo/jquery.wijmo.wijtabs.css"), array(), RECENSEMENTS_VERSION);
 
     // JQuery UI DatePicker CSS
-   wp_enqueue_style("jquery.ui.datePicker.css", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/pepper-grinder/jquery-ui-1.8.16.custom.css"));
+   wp_enqueue_style("jquery.ui.datePicker.css", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/pepper-grinder/jquery-ui-1.8.16.custom.css"), array(), RECENSEMENTS_VERSION);
 }
 
 // --------------------------------------------------------------------------------------------------------------------------------------------
@@ -187,7 +189,7 @@ function generate_table(){
 STR;
         
         foreach(get_table_results($StartDate, $EndDate, $Keyword) as $post_line) {
-            $published_date = date("d/m/Y", strtotime($post_line->published));
+            $published_date = date("Y-m-d", strtotime($post_line->published));
             $author_name    = $post_line->author;
 
             $post_link_href = $siteurl . "?p=" . urlencode($post_line->post_id);
