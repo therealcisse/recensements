@@ -91,15 +91,15 @@ function generate_series_scripts(){
    wp_enqueue_script("jqplot.categoryAxisRenderer", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/jqplot/plugins/jqplot.categoryAxisRenderer.min.js"), array( 'jqplot' ));
 
     //WIJMO
-   wp_enqueue_script("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/wijmo/jquery.wijmo.wijtabs.min.js"));
+   //wp_enqueue_script("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/wijmo/jquery.wijmo.wijtabs.min.js"));
 
    //TaBLe Sorter
    wp_enqueue_script("jQuery.metadata", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.metadata.js"));
    wp_enqueue_script("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/tablesorter/jquery.tablesorter-update.min.js"));
 
    //wp_enqueue_script("generate-series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/generate_series.js"));
-   wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/main.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
-   //wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/all.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
+   //wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/main.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
+   wp_enqueue_script("generate_series", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/js/all.js")); //main=is_date.js+jQuery.listbuilder.js+date_format.js+date.js+jquery.ui.datepicker-fr.js+generate_series.js
 }
 
 function generate_series_styles(){
@@ -115,8 +115,8 @@ function generate_series_styles(){
    wp_enqueue_style("jQuery.tablesorter", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/tablesorter/blue/style.css"));
 
     //WIJMO
-   wp_enqueue_style("WIJMO.jquery", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/rocket/jquery-wijmo.css"));
-   wp_enqueue_style("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/wijmo/jquery.wijmo.wijtabs.css"));
+   //wp_enqueue_style("WIJMO.jquery", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/rocket/jquery-wijmo.css"));
+   //wp_enqueue_style("WIJMO.tabs", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/wijmo/themes/wijmo/jquery.wijmo.wijtabs.css"));
 
     // JQuery UI DatePicker CSS
    wp_enqueue_style("jquery.ui.datePicker.css", path_join(WP_PLUGIN_URL, basename( dirname( __FILE__ ) ) . "/css/pepper-grinder/jquery-ui-1.8.16.custom.css"));

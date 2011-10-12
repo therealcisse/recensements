@@ -1455,9 +1455,15 @@ jQuery(function($){
         //$(panelEl).html('Done Loading tab');
     }
 
-    var myTabs = $("#recensements-table").wijtabs({
+    var myTabs = $("#recensements-table").tabs({
         tabTemplate: '<li><a href="#{href}">#{label} </a> </li>',
         spinner: '<em class="loading">Chargement de contenu...</em>',
+        /*load: function(event, ui) {
+            $('a', ui.panel).click(function() {
+                $(ui.panel).load(this.href);
+                return false;
+            });
+        },*/
         add: function(evt, ui) {
             $(ui.panel).html('<div class="loading"></div>');
 
@@ -1590,7 +1596,7 @@ jQuery(function($){
         setTimeout(function () {
             $('li', myTabs).each(function() {
                 var index = $(this).index($(this).parent());
-                myTabs.wijtabs('remove', index);
+                myTabs.tabs('remove', index);
             });
         }, 0);
 
@@ -1637,7 +1643,7 @@ jQuery(function($){
                         Keyword: encodeURIComponent(keyword)
                     }, URL = ajaxurl + '?' + $.param(Query);
                     
-                    myTabs.wijtabs('add',
+                    myTabs.tabs('add',
                         URL + '#recensements-table-tab-' + keyword,
                         capitalize(keyword)
                     );

@@ -7,7 +7,7 @@
 
     /*border-bottom: 1px solid #DFDFDF;*/
 
-    max-width: 370px;
+    max-width: 700px;
 }
 
 .formelement {
@@ -24,6 +24,22 @@
 
 #Keywords {
     display: none;
+}
+
+
+.side {
+     float: left;
+   width: 47.5%;
+}
+
+.row.last {
+    margin-top: 20px;
+    border-top: 1px solid #DFDFDF;
+    padding-top: 5px;
+}
+
+.side:not(:first-of-type) {
+    margin-left: 5%;
 }
 
 .formelement > p {
@@ -54,10 +70,11 @@ label {
 }
 
 .spacer{
-    float: right;
+/*    float: right;*/
     font-size:11px;
     color:#555555;
 }
+
 #generate_report_submit, .green{
     border-radius: 0;
     background:url('green.gif');
@@ -72,6 +89,7 @@ label {
     text-decoration:none;
 
     margin-left: 5px;
+    float: right;
 }
 
 legend {
@@ -213,6 +231,7 @@ fieldset.collapsible legend.collapse-processed  a:hover {
     height: 32px;
     display: inline-block;
     vertical-align: middle;
+    float: right;
 }
 
 .loading {
