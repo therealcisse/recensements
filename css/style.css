@@ -237,3 +237,33 @@ fieldset.collapsible legend.collapse-processed  a:hover {
 .loading {
     margin: auto 2em;
 }
+
+#recensements ::-webkit-scrollbar {
+width:9px;
+height:9px;
+}
+
+#recensements ::-webkit-scrollbar-button:start:decrement, #recensements ::-webkit-scrollbar-button:end:increment {
+display:block;
+height:0;
+background-color:transparent;
+}
+
+#recensements ::-webkit-scrollbar-track-piece {
+background-color:#FAFAFA;
+-webkit-border-radius:0;
+-webkit-border-bottom-right-radius:8px;
+-webkit-border-bottom-left-radius:8px;
+}
+
+#recensements ::-webkit-scrollbar-thumb:vertical {
+height:50px;
+background-color:#999;
+-webkit-border-radius:8px;
+}
+
+#recensements ::-webkit-scrollbar-thumb:horizontal {
+width:50px;
+background-color:#999;
+-webkit-border-radius:8px;
+}

@@ -1,0 +1,164 @@
+
+#keywords-content {
+    width: 30%;
+}
+
+/* css/forms.css */
+
+.standard-form li {
+    margin-bottom: 10px;
+}
+
+.standard-form li:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.standard-form {
+    margin: 20px 40px;
+}
+
+.standard-form fieldset {
+    background: url(bg_grey_dotted_h-line_3x1.png) 0 0 repeat-x;
+    *background-position: 0 1em;
+}
+
+.standard-form li fieldset {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.standard-form.stacked {
+    margin: 0 10px;
+}
+
+.standard-form .screen {
+    position: relative;
+    display: block;
+    filter: alpha(opacity = 0);
+    opacity: 0;
+    z-index: 2;
+    zoom: 1;
+    _margin-left: -20px;
+}
+
+
+/* css/jelly_bean_editor.css */
+
+.jellybean-editor ol {
+    padding: 5px;
+    border: 1px solid #CCC;
+}
+
+.jellybean-editor .jellybean-container-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 3px;
+    *display: inline;
+    zoom: 1;
+}
+
+.jellybean-editor .jellybean {
+    position: static;
+    left: 0;
+    padding: 3px 5px;
+    font-size: 13px;
+    background: #D6E3EE;
+    color: #069;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.jellybean-editor .jellybean .remove {
+    position: relative;
+    top: -1px;
+    padding-left: 5px;
+    color: #666;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.jellybean-editor .jellybean:hover {
+    background: #C3D2DF;
+}
+
+.jellybean-editor .jellybean .remove:hover {
+    color: #000;
+}
+
+.jellybean-editor .jellybean {
+    position: absolute;
+    left: -12345em;
+}
+
+.jellybean-editor .show-bean .jellybean {
+    position: static;
+}
+
+
+/*-------------------*/
+
+.add-keyword-container {
+    display: block;
+    background-color: #EFEFEF;
+    margin: 0 10px;
+    padding: 20px 20px 0;
+    position: relative;
+    zoom: 1;
+}
+
+#edit-keywords-add-ta{
+    width:320px;
+    font-size:13px;
+    padding:2px;
+    margin:0 3px 3px 0;
+    *padding-top:3px;
+}
+
+p.keywords-counter {
+    color: #333;
+    font-size: 11px;
+    min-height: 13px;
+    margin: 0px auto;
+}
+
+.keywords-editor {
+    background-color: #EFEFEF;
+    padding: 10px 20px 20px;
+}
+
+.keywords-editor .keywords-list {
+    background-color: #FFF;
+    position: relative;
+    min-height: 28px;
+    zoom: 1;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.btn-primary {
+    border-radius: 0;
+    background: url(css/green.gif);
+    padding: 0px 6px;
+    border: 1px solid #3B6E22;
+    height: 24px;
+    line-height: 24px;
+    color: white !important;
+    font-size: 12px;
+    margin-right: 10px;
+    display: inline-block;
+    text-decoration: none;
+    margin-left: 5px;
+}
